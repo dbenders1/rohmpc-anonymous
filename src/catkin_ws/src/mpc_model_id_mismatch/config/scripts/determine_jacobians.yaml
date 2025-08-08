@@ -1,0 +1,5 @@
+constants:
+  g: 9.8124
+
+model:
+  name: "falcon"

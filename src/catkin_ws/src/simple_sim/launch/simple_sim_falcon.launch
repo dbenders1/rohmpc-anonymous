@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- General parameters -->
+    <arg name="state_init" default="0,0,1,0,0,0,0,0,0,0,0,0"/>
+    <arg name="model_dt" default="0.002"/>
+    <arg name="steps" default="5"/>
+    <arg name="seed" default="1"/>
+    <arg name="use_w_random_walk" default="false"/>
+    <arg name="use_w_gaussian_noise" default="false"/>
+    <arg name="use_w_uniform_noise" default="false"/>
+    <arg name="add_meas_noise_init" default="false"/>
+    <arg name="use_eta_gaussian_noise" default="false"/>
+    <arg name="use_eta_uniform_noise" default="false"/>
+    <arg name="w_random_walk_correlations" default="0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5"/>
+    <arg name="w_gaussian_mean" default="0,0,0,0,0,0,0,0,0,0,0,0"/>
+    <arg name="w_gaussian_std" default="0.0036,0.0036,0.000018,0.0013,0.0013,0.00025,0.0068,0.0068,0.0012,0.016,0.016,0.00034"/>
+    <arg name="w_uniform_mean" default="0,0,0,0,0,0,0,0,0,0,0,0"/>
+    <arg name="w_uniform_std" default="0.0036,0.0036,0.000018,0.0013,0.0013,0.00025,0.0068,0.0068,0.0012,0.016,0.016,0.00034"/>
+    <arg name="w_max" default="0.0036,0.0036,0.000018,0.0013,0.0013,0.00025,0.0068,0.0068,0.0012,0.016,0.016,0.00034"/>
+    <arg name="eta_gaussian_mean" default="0,0,0,0,0,0,0,0,0,0,0,0"/>
+    <arg name="eta_gaussian_std" default="0.00005,0.00005,0.00005,0.000628,0.000628,0.000628,0.0005,0.0005,0.0005,0.00076,0.00076,0.00076"/>
+    <arg name="eta_uniform_mean" default="0,0,0,0,0,0,0,0,0,0,0,0"/>
+    <arg name="eta_uniform_std" default="0.00005,0.00005,0.00005,0.000628,0.000628,0.000628,0.0005,0.0005,0.0005,0.00076,0.00076,0.00076"/>
+
+    <!-- Run simulation node -->
+    <node pkg="simple_sim" type="falcon_model_node" name="dyn_model_node" output="screen" cwd="node" required="True"
+          args="$(arg state_init) $(arg model_dt) $(arg steps) $(arg seed) $(arg use_w_random_walk) $(arg use_w_gaussian_noise) $(arg use_w_uniform_noise) $(arg add_meas_noise_init) $(arg use_eta_gaussian_noise) $(arg use_eta_uniform_noise) $(arg w_random_walk_correlations) $(arg w_gaussian_mean) $(arg w_gaussian_std) $(arg w_uniform_mean) $(arg w_uniform_std) $(arg w_max) $(arg eta_gaussian_mean) $(arg eta_gaussian_std) $(arg eta_uniform_mean) $(arg eta_uniform_std)">
+    </node>
+</launch>

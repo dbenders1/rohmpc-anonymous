@@ -1,0 +1,50 @@
+constants:
+  g: 9.8124
+
+data:
+  # runtime_json_names:
+  #   [2025-08-08_08-36__ReferenceTrajectory_StaticPolyhedronConstraints_0]
+  # ros_rec_json_names: [2025-08-08_gaz_falcon_calibrate_rho_c]
+  runtime_json_names:
+    [
+      2025-08-08_09-31__ReferenceTrajectory_StaticPolyhedronConstraints_0,
+      2025-08-08_09-39__ReferenceTrajectory_StaticPolyhedronConstraints_0,
+      2025-08-08_09-45__ReferenceTrajectory_StaticPolyhedronConstraints_0,
+      2025-08-08_09-48__ReferenceTrajectory_StaticPolyhedronConstraints_0,
+    ]
+  ros_rec_json_names:
+    [
+      2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_circle_r1_f0dot3_cw,
+      2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_circle_r1_f0dot3_ccw,
+      2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_lemniscate_r1_f0dot3_cw,
+      2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_lemniscate_r1_f0dot3_ccw,
+    ]
+  n_idx_ignore: 0
+  t_cut_circle: 29
+  t_cut_lemniscate: 43
+
+compute_settings:
+  compute_x_in_eps_ball: false
+  x_in_eps_ball_nom: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  x_in_eps_ball_dir: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+do_plot:
+  lyap_err: true
+  rpi_tightening_over_rho_c: false
+  w_bar_c_time: false
+  w_bar_c_sorted: false
+  rho_c_w_bar_c: false
+  epsilon_time: false
+  epsilon_sorted: false
+
+model:
+  name: "falcon"
+
+plot_settings:
+  linewidth: 1.5
+  n_rows: 3
+  n_cols: 4
+  plot_stage_idx_at_ax_idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, null, null]
+
+save_settings:
+  lyap_err: true

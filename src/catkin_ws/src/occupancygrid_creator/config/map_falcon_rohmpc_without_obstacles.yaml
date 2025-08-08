@@ -1,0 +1,57 @@
+gridmap:
+  frequency: 1        # which frequency do we want to send an updated map?
+  map_id: "world"      # map name
+  size_x: 6           # size of x in meters
+  size_y: 6           # size of y in meters
+  resolution: 1    # size of each grid
+  map_origin_x: 0     # center x position of the map
+  map_origin_y: 0     # center y position of the map
+  publish_topic: "/occupancy_grid" # The topic name of the map publisher 
+  n_runs: 5
+
+obstacles:
+  inflate: True
+  inflation_thickness: 0.06925 # radius around obstacles to inflate
+  create_static:
+    use: false
+    circles:
+      x_center: []
+      y_center: []
+      radius: []
+      names: []
+    squares:
+      x_center: []
+      y_center: []
+      length: []
+      width: []
+      orientation_deg: [] # 0 orientation means length is in x-direction
+      line_thickness: []
+      names: []
+  receiving_position:
+    use: false
+    circles:
+      topics: []
+      radius: []
+    rectangles:
+      topics: []
+      lengths: []
+      widths: []
+      line_thickness: []
+    lines:
+      topics: []
+      lengths: []
+      line_thickness: []
+  receiving_position_gazebo:
+    use: false
+    topic: "/gazebo/model_states"
+    radius: 0.5
+
+recording:
+  static_circle_indices_to_record: []
+  static_square_indices_to_record: []
+
+visualization:
+  static_circle_indices_to_visualize: []
+  static_square_indices_to_visualize: []
+  marker_color: [0.7, 0.7, 0.7, 1]
+  marker_z: 1.8

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>decomp_util</name>
+  <version>1.0.0</version>
+  <description>The decomp_util package</description>
+
+  <maintainer email="sikang@seas.upenn.edu">sikang</maintainer>
+  <author>Author Name</author>
+
+  <license>BSD 3-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>mpc_tools</depend>
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+
+</package>

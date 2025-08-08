@@ -1,0 +1,42 @@
+data:
+  runtime_json_name: 2025-08-08_11-47__ReferenceTrajectory_StaticPolyhedronConstraints_0
+  ros_rec_json_name: 2025-08-08_gaz_falcon_rohmpc
+
+print_settings:
+  # t: -1
+  t: 3
+  check_gt_est_states: False
+  print_pobj_comp: False
+  # print_track_err: ["total", "u", "x", "p", "2d_p"]
+  print_track_err: []
+
+do_plot:
+  obs: False
+  obs_inflation: True
+  pmpc_tube: True
+  pmpc_pred: True
+  tmpc_ref: False
+  tmpc_tube: True
+  tmpc_pred: False
+  x: True
+
+plot_settings:
+  t: [1, 4]
+  k_pmpc_pred: [0]
+  k_ref: [0]
+  k_pred: [0]
+  t_div_tmpc_tube: 20
+  linewidth_pmpc_tube: 1
+  linewidth_tmpc_tube: 1
+  grid_resolution: 0.0005 # needs to be the same value as specified in the map used by the occupancy grid creator
+  r_pmpc: 0.0012
+  r_tmpc_ref: 0.0009
+  r_tmpc: 0.0006
+  r_x: 0.0003
+  alpha_tmpc_tube_controller: 0.7
+  alpha_tmpc_tube_total: 0.4
+
+save_settings:
+  show_fig: False
+  save_fig: True
+  fig_name: rohmpc

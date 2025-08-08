@@ -1,0 +1,3 @@
+w_json_name: 2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_cw_w
+atol: 0.0001
+rtol: 0

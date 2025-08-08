@@ -1,0 +1,45 @@
+data:
+  json_name: 2025-07-19_sim_falcon_cubic_hermite_interpolation
+  # json_name: 2025-07-15_sim_falcon_cubic_hermite_interpolation_2nd_input
+  t_to_plot: 3
+
+plot_settings:
+  colors: [orange, moccasin]
+  sizes: 15
+  widths: 0.5
+  n_rows_states: 4
+  n_cols_states: 4
+  plot_x_idx_at_ax_idx:
+    &my_plot_x_idx_at_ax_idx [
+      0,
+      1,
+      2,
+      null,
+      3,
+      4,
+      5,
+      null,
+      6,
+      7,
+      8,
+      null,
+      9,
+      10,
+      11,
+      null,
+    ]
+  x_labels:
+    &my_x_labels [
+      px (m),
+      py (m),
+      pz (m),
+      $\phi$ (rad),
+      "$\\theta$ (rad)",
+      $\psi$ (rad),
+      vx (m/s),
+      vy (m/s),
+      vz (m/s),
+      wbx (rad/s),
+      wby (rad/s),
+      wbz (rad/s),
+    ]

@@ -1,0 +1,4 @@
+*.pdf
+
+# Do not ignore pre-generated paper figures
+!tube_fit.pdf

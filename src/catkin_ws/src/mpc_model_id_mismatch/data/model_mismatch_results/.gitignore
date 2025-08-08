@@ -1,0 +1,11 @@
+*.json
+*.mat
+
+# Do not ignore pre-generated json files with disturbance bounds
+!2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_cw_w.json
+!2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_ccw_w.json
+!2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_cw_w.json
+!2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_ccw_w.json
+
+# Do not ignore the result of model mismatch determination based on the 4 Gazebo trajectories
+!falcon_t.mat

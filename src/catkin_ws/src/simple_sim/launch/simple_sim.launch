@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- General parameters -->
+    <arg name="model" default="drone_hovergames"/>
+    <arg name="x_init" default="0.0"/>
+    <arg name="y_init" default="0.0"/>
+    <arg name="z_init" default="1.0"/>
+    <arg name="run_event_based" default="true"/>
+    <arg name="model_dt" default="0.05"/>
+    <arg name="steps" default="1"/>
+    <arg name="model_rate" default="20"/>
+    <arg name="add_timing_variance" default="false"/>
+
+    <!-- Construct program arguments -->
+    <arg unless="$(arg run_event_based)" name="arg_run_event_based" value="False"/>
+    <arg     if="$(arg run_event_based)" name="arg_run_event_based" value="True"/>
+
+    <!-- Run simulation node -->
+    <node pkg="simple_sim" type="hovergames_model_node" name="dyn_model_node" output="screen" cwd="node" required="True"
+          args="$(arg x_init) $(arg y_init) $(arg z_init) $(arg run_event_based) $(arg model_dt) $(arg steps) $(arg model_rate) $(arg add_timing_variance)"/>
+</launch>

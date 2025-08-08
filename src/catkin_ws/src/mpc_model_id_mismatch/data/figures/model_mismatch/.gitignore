@@ -1,0 +1,5 @@
+*.pdf
+
+# Do not ignore pre-generated paper figures
+!likelihood.pdf
+!w_est_gt_ratios_combined.pdf

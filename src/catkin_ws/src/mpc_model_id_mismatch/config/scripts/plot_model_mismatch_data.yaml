@@ -1,0 +1,148 @@
+mhe_json_name: falcon_t
+time_idx: 0
+
+gazebo_w_json_names: []
+gazebo_w_idx: 9
+
+do_plot:
+  y_y_fs_over_horizon: false
+  y_x_est_u_over_time: false
+  y_x_est_u_over_horizon: false
+  u_t_over_horizon: false
+  u_wm_over_horizon: false
+  w_est_over_time: false
+  w_est_over_horizon: false
+  eta_est_over_time: false
+  eta_est_over_horizon: false
+  x_est_w_est_stage: false
+  w_est_gt_ratios: false
+  w_est_gt_ratios_combined: true
+  eta_est_gt_ratios: false
+  costs: false
+  likelihood: false
+  Q_R_trace: false
+  Q_diag: false
+  R_diag: false
+  Q_eig_vals: false
+  R_eig_vals: false
+
+plot_settings:
+  sizes: 2
+  widths: 0.5
+  n_rows_inputs: 2
+  n_cols_inputs: 2
+  n_rows_states: 4
+  n_cols_states: 4
+  plot_x_idx_at_ax_idx:
+    &my_plot_x_idx_at_ax_idx [
+      0,
+      1,
+      2,
+      null,
+      3,
+      4,
+      5,
+      null,
+      6,
+      7,
+      8,
+      null,
+      9,
+      10,
+      11,
+      null,
+    ]
+  plot_y_idx_at_ax_idx: *my_plot_x_idx_at_ax_idx
+  plot_u_idx_at_ax_idx:
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      1,
+      2,
+      3,
+    ]
+  plot_w_idx_at_ax_idx:
+    [0, 1, 2, null, 3, 4, 5, null, 6, 7, 8, null, 9, 10, 11, null]
+  plot_eta_idx_at_ax_idx:
+    [0, 1, 2, null, 3, 4, 5, null, 6, 7, 8, null, 9, 10, 11, null]
+  u_labels: [t0, t1, t2, t3]
+  u_unit_labels: [N, N, N, N]
+  x_labels:
+    &my_x_labels [
+      px,
+      py,
+      pz,
+      $\phi$,
+      "$\\theta$",
+      $\psi$,
+      vx,
+      vy,
+      vz,
+      wbx,
+      wby,
+      wbz,
+    ]
+  x_unit_labels:
+    &my_x_unit_labels [
+      "$m$",
+      "$m$",
+      "$m$",
+      "$rad$",
+      "$rad$",
+      "$rad$",
+      "$m/s$",
+      "$m/s$",
+      "$m/s$",
+      "$rad/s$",
+      "$rad/s$",
+      "$rad/s$",
+    ]
+  y_labels: *my_x_labels
+  y_unit_labels: *my_x_unit_labels
+  w_labels:
+    [
+      "$w_{px}$",
+      "$w_{py}$",
+      "$w_{pz}$",
+      "$w_{\\phi}$",
+      "$w_{\\theta}$",
+      "$w_{\\psi}$",
+      "$w_{vx}$",
+      "$w_{vy}$",
+      "$w_{vz}$",
+      "$w_{wbx}$",
+      "$w_{wby}$",
+      "$w_{wbz}$",
+    ]
+  w_unit_labels:
+    [
+      "m / s",
+      "m / s",
+      "m / s",
+      "rad / s",
+      "rad / s",
+      "rad / s",
+      "m/s / s",
+      "m/s / s",
+      "m/s / s",
+      "rad/s / s",
+      "rad/s / s",
+      "rad/s / s",
+    ]
+  eta_labels: *my_x_labels
+  eta_unit_labels: *my_x_unit_labels
+
+save_settings:
+  w_est_gt_ratios_combined: true
+  likelihood: true

@@ -1,0 +1,17 @@
+*.bag
+
+# Do not ignore pre-generated bag files to determine model mismatch
+!2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_cw.bag
+!2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_ccw.bag
+!2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_cw.bag
+!2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_ccw.bag
+
+# Do not ignore the pre-generated bag files to calibrate rho_c, w_bar_c, and epsilon
+!2025-08-08_gaz_falcon_calibrate_rho_c.bag
+!2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_circle_r1_f0dot3_cw.bag
+!2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_circle_r1_f0dot3_ccw.bag
+!2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_lemniscate_r1_f0dot3_cw.bag
+!2025-08-08_gaz_falcon_calibrate_w_bar_c_epsilon_lemniscate_r1_f0dot3_ccw.bag
+
+# Do not ignore the pre-generated bag files to analyze the ROHMPC framework
+!2025-08-08_gaz_falcon_rohmpc.bag

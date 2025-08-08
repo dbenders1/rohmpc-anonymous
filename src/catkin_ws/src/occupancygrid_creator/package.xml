@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>occupancygrid_creator</name>
+  <version>0.0.1</version>
+  <description>The occupancygrid_creator package</description>
+
+  <maintainer email="foo@bar.com">Author Name</maintainer>
+  <author>Author Name</author>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>eigen</depend>
+  <depend>tf</depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <export>
+  </export>
+</package>

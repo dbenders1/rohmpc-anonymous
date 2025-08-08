@@ -1,0 +1,90 @@
+constants:
+  g: 9.8124
+
+simulation:
+  w_max:
+    [
+      0.0036,
+      0.0036,
+      0.000018,
+      0.0013,
+      0.0013,
+      0.00025,
+      0.0068,
+      0.0068,
+      0.0012,
+      0.016,
+      0.016,
+      0.00034,
+    ]
+  eta_max:
+    [
+      0.00005,
+      0.00005,
+      0.00005,
+      0.000628,
+      0.000628,
+      0.000628,
+      0.0005,
+      0.0005,
+      0.0005,
+      0.00076,
+      0.00076,
+      0.00076,
+    ]
+  eta_max_scaling: 1
+
+recorded_data:
+  json_names:
+    [
+      2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_cw,
+      2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_ccw,
+      2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_cw,
+      2025-08-07_gaz_falcon_model_mismatch_traj_lemniscate_r1_f0dot3_ccw,
+    ]
+  # json_names:
+  #   [
+  #     2025-08-07_gaz_falcon_model_mismatch_traj_circle_r1_f0dot3_cw,
+  #   ]
+  data_sel:
+    overwrite: false
+    automatic: true
+    automatic_first_offset_dist: 0.5
+
+  processing:
+    ts: 0.002 # interpolation time
+
+model:
+  name: "falcon"
+  quad_number: 7
+
+mhe:
+  generate_solver: true
+  n_iter: 2
+  n_times: 0
+  M: 40
+  stage_est: 20
+  eps: 1e-9
+  cost_scaling: 1
+  update_Q: true
+  update_R: true
+  determine_w: false # if true, the script will use a different solver to determine disturbance vector w from data
+  use_predetermined_w: true # if true, the script will use predetermined disturbance vector w
+
+printing:
+  disturbances:
+    min: true
+    max: true
+    bias: true
+    min_rmse: true
+    max_rmse: true
+    total_rmse: true
+  meas_noises:
+    min: true
+    max: true
+
+plotting:
+  raw_interp_inputs: false
+  raw_interp_outputs: false
+  raw_interp_disturbances: false
+  raw_interp_meas_noises: false

@@ -1,0 +1,7 @@
+constants:
+  g: 9.8124
+
+model:
+  name: "falcon"
+
+gazebo_w_json_name: 2025-07-07_gaz_falcon_mpc_model_mismatch_circle_r1_f0dot1_cw_dist_meas_noise_w

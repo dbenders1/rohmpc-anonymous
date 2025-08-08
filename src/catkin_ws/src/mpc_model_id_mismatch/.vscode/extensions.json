@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"ms-python.python",
+		"ms-python.black-formatter",
+		"redhat.vscode-xml",
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format",
+		"cheshirekow.cmake-format"
+	]
+}

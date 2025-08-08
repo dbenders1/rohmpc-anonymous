@@ -1,0 +1,14 @@
+constants:
+  g: 9.8124
+
+recorded_data:
+  json_names:
+    [
+      2025-07-03_gaz_falcon_mpc_model_id_inertia_matrix_dist_no_meas_noise_only_thrust_dragtorque,
+    ]
+  overwrite_data_sel: false
+  processing:
+    ts: 0.002 # interpolation time
+
+model:
+  name: "falcon"

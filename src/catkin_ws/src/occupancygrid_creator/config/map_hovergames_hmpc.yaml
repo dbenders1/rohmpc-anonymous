@@ -1,0 +1,56 @@
+gridmap:
+  frequency: 1        # which frequency do we want to send an updated map?
+  map_id: "map"      # map name
+  size_x: 12           # size of x in meters
+  size_y: 12           # size of y in meters
+  resolution: 0.01    # size of each grid
+  map_origin_x: 0     # center x position of the map
+  map_origin_y: 0     # center y position of the map
+  publish_topic: "/occupancy_grid" # The topic name of the map publisher 
+
+obstacles:
+  inflate: True
+  inflation_thickness: 0.2 # radius around obstacles to inflate
+  create_static:
+    use: true
+    circles:
+      x_center: []
+      y_center: []
+      radius: []
+      names: []
+    squares:
+      x_center: [0, -1.2, 1.2]
+      y_center: [0, 0.1, -0.1]
+      length: [8, 0.6, 0.6]
+      width: [7, 1.2, 1.2]
+      orientation_deg: [0, 30, 30] # 0 orientation means length is in x-direction
+      line_thickness: [0.01, 0.01, 0.01]
+      names: ["bounds", "rectangle2x1_0", "rectangle2x1_1"]
+  receiving_position:
+    use: true
+    circles:
+      topics: []
+      radius: []
+    rectangles:
+      topics: [/obstacles/rectangle2x1_0, /obstacles/rectangle2x1_1]
+      lengths: [1.2, 1.2]
+      widths: [0.6, 0.6]
+      line_thickness: [0.01, 0.01, 0.01]
+    lines:
+      topics: []
+      lengths: []
+      line_thickness: []
+  receiving_position_gazebo:
+    use: false
+    topic: "/gazebo/model_states"
+    radius: 0.5
+
+recording:
+  static_circle_indices_to_record: []
+  static_square_indices_to_record: [1, 2]
+
+visualization:
+  static_circle_indices_to_visualize: []
+  static_square_indices_to_visualize: [1, 2]
+  marker_color: [0.7, 0.7, 0.7, 1]
+  marker_z: 1.8
