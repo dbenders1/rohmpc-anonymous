@@ -1,20 +1,18 @@
-# hmpc
+# rohmpc
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
 
 
 
 ## ICRA 2026 submission
-The reference implementation of the design pipeline for robust MPC schemes in our ICRA 2026 submission.
+The reference implementation of our ICRA 2026 submission:
+
+**From Data to Safe Mobile Robot Navigation: An Efficient, Modular, and Reproducible Robust MPC Design Pipeline**
 
 
 
 ## Summary
-In this work, we propose the following pipeline for the synthesis of robust (output-feedback) MPC schemes:
-
-<div align="center">
-  <img src="./media/pipeline.svg" alt="Design pipeline for robust MPC schemes">
-</div>
+In this work, we propose the following pipeline for the synthesis of robust (output-feedback) MPC schemes as visualized in [this figure](./media/pipeline.svg) (does not load correctly on Anonymous GitHub).
 
 This pipeline is:
 
@@ -30,11 +28,7 @@ Visit the following links to see how each of the steps in the pipeline is implem
 3. [Tightening calibration](./src/tightening_calib.md)
 4. [ROHMPC deployment and analysis](./src/rohmpc.md)
 
-The animation below shows the ROHMPC framework operating in a Gazebo simulation:
-
-<div align="center">
-  <img src="./media/rohmpc.gif" alt="ROHMPC RViZ animation">
-</div>
+[This animation](./media/rohmpc.gif) shows the ROHMPC framework operating in a Gazebo simulation.
 
 We challenge you to reproduce this result in our paper! :wink:
 
