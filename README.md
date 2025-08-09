@@ -12,7 +12,7 @@ The reference implementation of our ICRA 2026 submission:
 
 
 ## Summary
-In this work, we propose the following pipeline for the synthesis of robust (output-feedback) MPC schemes as visualized in [this figure](./media/pipeline.svg) (does not load correctly on Anonymous GitHub).
+In this work, we propose the following pipeline for the synthesis of robust (output-feedback) MPC schemes as visualized in [this figure](./media/pipeline.png) (does not load correctly on Anonymous GitHub).
 
 This pipeline is:
 
